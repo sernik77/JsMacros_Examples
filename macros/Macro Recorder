@@ -1,0 +1,27 @@
+// By Etheradon
+// Player input / movement recorder
+//Only records the player movement and rotation. When you activate the script it will record any movement until you step onto yellow wool and then waits for you to stand on green wool. When this happens it will replay the input. Thus, it makes sense to start on green wool so you can replay your exact movement.
+
+Player.clearInputs();
+Player.setDrawPredictions(false);
+let player = Player.getPlayer();
+
+let inputs = new Array();
+
+Chat.log("Start recording");
+while (World.getBlock(player.getBlockPos().down()).getId() !== "minecraft:yellow_wool") {
+    inputs.push(Player.getCurrentPlayerInput());
+    Client.waitTick();
+}
+Chat.log("Saved Input");
+
+while (World.getBlock(player.getBlockPos().down()).getId() !== "minecraft:green_wool") {
+    Client.waitTick();
+}
+
+Chat.log("Replaying Input");
+Player.predictInputs(inputs);
+Player.setDrawPredictions(true);
+for (let input of inputs) {
+    Player.addInput(input);
+}

@@ -2,7 +2,8 @@
 
 [![License](https://img.shields.io/badge/License-GPL%203.0-blue?style=for-the-badge)](LICENSE)
 [![GitHub](https://img.shields.io/badge/GitHub-JsMacros_Examples-red?style=for-the-badge)](https://github.com/sernik77/JsMacros_Examples)
-[![Discord](https://img.shields.io/discord/966251626698526730?style=for-the-badge)](https://discord.gg/4NQ3SPXsKJ)
+
+[JsMacros Discord Server](https://discord.gg/KRxmxedUpm)
 
 **JSForDummies2** / **JsMacros Examples** — a chaotic but plentiful collection of ready-to-use JavaScript macros for the [JsMacros](https://www.curseforge.com/minecraft/mc-mods/jsmacros) mod (by WagYourTail) and Meteor Client.
 
